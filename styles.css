@@ -59,6 +59,11 @@ body {
   border-left-color: var(--orange);
 }
 
+.sidebar a.active {
+  color: var(--yellow);
+  border-left-color: var(--orange);
+}
+
 main {
   margin-left: 280px;
 }
@@ -67,8 +72,9 @@ main {
   min-height: 430px;
   background:
     linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.85)),
-    radial-gradient(circle at 70% 65%, rgba(255, 122, 24, .75), transparent 22%),
-    linear-gradient(140deg, #050505, #200603 45%, #000);
+    url("https://www.shutterstock.com/image-photo/bright-burning-fire-background-hot-260nw-486502648.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: flex-end;
 }
@@ -90,7 +96,9 @@ main {
 }
 
 .about,
-.project {
+.project,
+.news,
+.page-header {
   padding: 64px;
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
@@ -111,6 +119,141 @@ main {
   border: 3px solid var(--orange);
 }
 
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.about-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 3px;
+  background: var(--orange);
+  color: #080808;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.about-actions a + a {
+  border: 1px solid rgba(244, 239, 232, 0.32);
+  background: transparent;
+  color: var(--text);
+}
+
+.about-actions a:hover,
+.about-actions a:focus {
+  background: var(--yellow);
+  color: #080808;
+}
+
+.about-actions a + a:hover,
+.about-actions a + a:focus {
+  border-color: var(--orange);
+  background: rgba(255, 122, 24, 0.1);
+  color: var(--text);
+}
+
+.news {
+  background: #0c0c0c;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin: 0;
+}
+
+.section-heading a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.section-heading a:hover {
+  color: var(--orange);
+}
+
+.linkedin-feed {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.linkedin-card {
+  min-height: 260px;
+  padding: 22px;
+  border: 1px solid rgba(244, 239, 232, 0.12);
+  background: var(--panel);
+}
+
+.linkedin-card span,
+.page-header span {
+  display: block;
+  color: var(--yellow);
+  font-size: 0.82rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.linkedin-card h3 {
+  margin: 14px 0 10px;
+  color: var(--text);
+  font-size: 1.15rem;
+}
+
+.linkedin-card p {
+  margin: 14px 0 0;
+}
+
+.linkedin-card a {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.linkedin-card a:hover {
+  color: var(--orange);
+}
+
+.page-header {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.88)),
+    url("https://www.shutterstock.com/image-photo/bright-burning-fire-background-hot-260nw-486502648.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.page-header h2 {
+  max-width: 850px;
+  margin: 12px 0 16px;
+  color: var(--yellow);
+  font-size: 2.7rem;
+}
+
+.page-header p {
+  max-width: 760px;
+  margin: 0;
+  font-size: 1.15rem;
+}
+
 h2 {
   color: var(--orange);
 }
@@ -122,6 +265,10 @@ p {
 
 .project {
   min-height: 300px;
+}
+
+.project.detail {
+  background: var(--panel);
 }
 
 @media (max-width: 800px) {
@@ -139,7 +286,20 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .linkedin-feed {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .page-header h2 {
     font-size: 2.2rem;
   }
 }

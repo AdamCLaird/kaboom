@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Engineering Portfolio</title>
+  <title>Adam Laird | Engineering Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <aside class="sidebar">
-    <h1>Your Name</h1>
+    <h1>Adam Laird</h1>
     <p>Engineering Portfolio</p>
 
     <nav>
-      <a href="#averting">Averting Armageddon Project</a>
-      <a href="#wui">Wildland Urban Interface Fire Model</a>
-      <a href="#theory">Theory of ROS and HT Models</a>
-      <a href="#past">Past Projects</a>
+      <a href="index.html" class="active">About</a>
+      <a href="fem.html">Finite Element IVP/BVP Solver</a>
+      <a href="averting.html">Averting Armageddon Project</a>
+      <a href="wui.html">Wildland Urban Interface Fire Model</a>
+      <a href="theory.html">Theory of ROS and HT Models</a>
+      <a href="past.html">Past Projects</a>
     </nav>
   </aside>
 
@@ -23,41 +25,45 @@
     <section class="hero">
       <div class="hero-overlay">
         <h2>Combustion, Fire Modeling, and Engineering Systems</h2>
-        <p>Academic engineering portfolio focused on fire behavior, heat transfer, and applied modeling.</p>
+        <p>Ph.D. student in Mechanical Engineering at UC Berkeley working on combustion modeling, thermodynamics, and computational mechanics.</p>
       </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
       <div>
         <h2>About Me</h2>
         <p>
-          I am an engineering student/researcher interested in combustion, wildfire modeling,
-          heat transfer, and computational approaches to physical systems. My work combines
-          theory, simulation, and applied engineering design.
+          Hello! I am a 1st year Ph.D. student at the University of California,
+          Berkeley in Mechanical Engineering. I work in the Berkeley Fire
+          Research Lab under Dr. Michael Gollner. I have strong interests in
+          combustion modeling, fundamental thermodynamics, and computational
+          mechanics.
         </p>
+
+        <div class="about-actions" aria-label="Academic documents">
+          <a href="documents/adam-laird-cv.pdf" download>Download CV</a>
+          <a href="documents/adam-laird-resume.pdf" download>Download Resume</a>
+        </div>
       </div>
 
-      <img src="assets/profile.jpg" alt="Professional portrait" />
+      <img
+        src="https://media.licdn.com/dms/image/v2/D5603AQHqAkVbaT1LIA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709336200406?e=1779926400&v=beta&t=kKJxnsM-Gg7yyVlbm1B3Ap9HhFhPMmeXyWF9e4mP4h0"
+        alt="Adam Laird professional portrait"
+      />
     </section>
 
-    <section id="averting" class="project">
-      <h2>Averting Armageddon Project</h2>
-      <p>Project summary coming soon.</p>
-    </section>
+    <section class="news">
+      <div class="section-heading">
+        <h2>Recent News</h2>
+        <a href="https://www.linkedin.com/in/adamclaird/" target="_blank" rel="noreferrer">View LinkedIn</a>
+      </div>
 
-    <section id="wui" class="project">
-      <h2>Wildland Urban Interface Fire Model</h2>
-      <p>Project summary coming soon.</p>
-    </section>
-
-    <section id="theory" class="project">
-      <h2>Theory of ROS and HT Models</h2>
-      <p>Project summary coming soon.</p>
-    </section>
-
-    <section id="past" class="project">
-      <h2>Past Projects</h2>
-      <p>Project summaries coming soon.</p>
+      <div class="linkedin-feed" data-linkedin-feed aria-label="Recent LinkedIn posts">
+        <article class="linkedin-card">
+          <span>LinkedIn Feed</span>
+          <p>Loading recent posts...</p>
+        </article>
+      </div>
     </section>
   </main>
 
