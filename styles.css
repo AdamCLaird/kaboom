@@ -1,0 +1,145 @@
+:root {
+  --bg: #070707;
+  --panel: #111111;
+  --text: #f4efe8;
+  --muted: #b9aaa0;
+  --orange: #ff7a18;
+  --red: #d7261e;
+  --yellow: #ffd166;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(180deg, #140805, #050505);
+  border-right: 1px solid rgba(255, 122, 24, 0.35);
+  padding: 32px 24px;
+}
+
+.sidebar h1 {
+  margin: 0;
+  color: var(--yellow);
+  font-size: 1.7rem;
+}
+
+.sidebar p {
+  color: var(--muted);
+  margin-bottom: 36px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar a {
+  color: var(--text);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  padding-left: 12px;
+}
+
+.sidebar a:hover {
+  color: var(--orange);
+  border-left-color: var(--orange);
+}
+
+main {
+  margin-left: 280px;
+}
+
+.hero {
+  min-height: 430px;
+  background:
+    linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.85)),
+    radial-gradient(circle at 70% 65%, rgba(255, 122, 24, .75), transparent 22%),
+    linear-gradient(140deg, #050505, #200603 45%, #000);
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-overlay {
+  padding: 64px;
+  max-width: 900px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: var(--yellow);
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.about,
+.project {
+  padding: 64px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 48px;
+  align-items: center;
+  background: var(--panel);
+}
+
+.about img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--orange);
+}
+
+h2 {
+  color: var(--orange);
+}
+
+p {
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.project {
+  min-height: 300px;
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+}
