@@ -193,6 +193,34 @@ p {
   min-height: 300px;
 }
 
+.past-project {
+  max-width: 920px;
+  margin-top: 32px;
+}
+
+.past-project:first-of-type {
+  margin-top: 0;
+}
+
+.poster-link {
+  display: block;
+  max-width: 720px;
+  margin-top: 22px;
+  border: 1px solid rgba(255, 122, 24, 0.4);
+  background: #080808;
+}
+
+.poster-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.poster-link:hover,
+.poster-link:focus {
+  border-color: var(--yellow);
+}
+
 @media (max-width: 800px) {
   .sidebar {
     position: static;
