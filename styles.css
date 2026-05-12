@@ -72,6 +72,7 @@ main {
 }
 
 .hero {
+  position: relative;
   min-height: 430px;
   background:
     linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.85)),
@@ -98,6 +99,18 @@ main {
   font-size: 1.55rem;
 }
 
+.hero-profile {
+  position: absolute;
+  right: 92px;
+  top: 88px;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--orange);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
 .about,
 .project {
   padding: 64px;
@@ -105,19 +118,8 @@ main {
 }
 
 .about {
-  display: grid;
-  grid-template-columns: 1fr 240px;
-  gap: 48px;
-  align-items: center;
+  display: block;
   background: var(--panel);
-}
-
-.about img {
-  width: 240px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--orange);
 }
 
 .about-actions {
@@ -300,8 +302,11 @@ p {
     margin-left: 0;
   }
 
-  .about {
-    grid-template-columns: 1fr;
+  .hero-profile {
+    position: static;
+    width: 200px;
+    height: 200px;
+    margin: 0 64px 64px;
   }
 
   .hero h2 {
