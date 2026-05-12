@@ -17,7 +17,11 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .sidebar {
@@ -34,13 +38,13 @@ body {
 .sidebar h1 {
   margin: 0;
   color: var(--yellow);
-  font-size: 2rem;
+  font-size: 2.25rem;
 }
 
 .sidebar p {
   color: var(--muted);
   margin-bottom: 36px;
-  font-size: 1.05rem;
+  font-size: 1.18rem;
 }
 
 .sidebar nav {
@@ -54,7 +58,7 @@ body {
   text-decoration: none;
   border-left: 3px solid transparent;
   padding-left: 12px;
-  font-size: 1.08rem;
+  font-size: 1.18rem;
   line-height: 1.35;
 }
 
@@ -84,14 +88,14 @@ main {
 }
 
 .hero h2 {
-  font-size: 3.4rem;
+  font-size: 3.8rem;
   margin-bottom: 16px;
   color: var(--yellow);
 }
 
 .hero p {
   color: var(--muted);
-  font-size: 1.35rem;
+  font-size: 1.55rem;
 }
 
 .about,
@@ -127,15 +131,15 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 0 18px;
+  min-height: 48px;
+  padding: 0 20px;
   border-radius: 3px;
   background: var(--orange);
   color: #080808;
   text-decoration: none;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 700;
-  font-size: 1.02rem;
+  font-size: 1.12rem;
   transition: background-color 150ms ease, color 150ms ease;
 }
 
@@ -173,20 +177,20 @@ main {
 
 h2 {
   color: var(--orange);
-  font-size: 2rem;
+  font-size: 2.35rem;
   margin-top: 0;
 }
 
 h3 {
   color: var(--text);
-  font-size: 1.35rem;
+  font-size: 1.65rem;
   margin: 24px 0 8px;
 }
 
 p {
   line-height: 1.75;
   color: var(--muted);
-  font-size: 1.12rem;
+  font-size: 1.25rem;
 }
 
 .project {
@@ -227,7 +231,7 @@ p {
   padding: 7px 10px;
   background: rgba(0, 0, 0, 0.72);
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -239,6 +243,50 @@ p {
 .poster-link:hover img,
 .poster-link:focus img {
   filter: grayscale(20%) brightness(72%);
+}
+
+.poster-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.poster-modal.is-open {
+  display: flex;
+}
+
+.poster-modal img {
+  max-width: 94vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border: 1px solid rgba(255, 122, 24, 0.45);
+  background: #050505;
+}
+
+.poster-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(244, 239, 232, 0.35);
+  background: #111111;
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.poster-modal-close:hover,
+.poster-modal-close:focus {
+  border-color: var(--orange);
+  color: var(--yellow);
 }
 
 @media (max-width: 800px) {
@@ -257,6 +305,6 @@ p {
   }
 
   .hero h2 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 }
