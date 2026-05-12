@@ -177,6 +177,12 @@ h2 {
   margin-top: 0;
 }
 
+h3 {
+  color: var(--text);
+  font-size: 1.35rem;
+  margin: 24px 0 8px;
+}
+
 p {
   line-height: 1.75;
   color: var(--muted);
