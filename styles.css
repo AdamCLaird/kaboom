@@ -204,21 +204,41 @@ p {
 
 .poster-link {
   display: block;
+  position: relative;
   max-width: 720px;
   margin-top: 22px;
   border: 1px solid rgba(255, 122, 24, 0.4);
   background: #080808;
+  overflow: hidden;
 }
 
 .poster-link img {
   display: block;
   width: 100%;
   height: auto;
+  filter: grayscale(40%) brightness(58%);
+  transition: filter 180ms ease;
+}
+
+.poster-link span {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  padding: 7px 10px;
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .poster-link:hover,
 .poster-link:focus {
   border-color: var(--yellow);
+}
+
+.poster-link:hover img,
+.poster-link:focus img {
+  filter: grayscale(20%) brightness(72%);
 }
 
 @media (max-width: 800px) {
