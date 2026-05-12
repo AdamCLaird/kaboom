@@ -335,6 +335,12 @@ p {
   color: var(--orange);
 }
 
+.site-credit {
+  margin-top: 28px;
+  font-size: 0.82rem;
+  color: rgba(185, 170, 160, 0.72);
+}
+
 @media (max-width: 800px) {
   .sidebar {
     position: static;
