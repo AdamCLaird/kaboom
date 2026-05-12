@@ -199,20 +199,20 @@ main {
   color: var(--orange);
 }
 
-.linkedin-feed {
+.news-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
-.linkedin-card {
+.news-card {
   min-height: 260px;
   padding: 22px;
   border: 1px solid rgba(244, 239, 232, 0.12);
   background: var(--panel);
 }
 
-.linkedin-card span,
+.news-card span,
 .page-header span {
   display: block;
   color: var(--yellow);
@@ -221,24 +221,24 @@ main {
   text-transform: uppercase;
 }
 
-.linkedin-card h3 {
+.news-card h3 {
   margin: 14px 0 10px;
   color: var(--text);
   font-size: 1.15rem;
 }
 
-.linkedin-card p {
+.news-card p {
   margin: 14px 0 0;
 }
 
-.linkedin-card a {
+.news-card a {
   display: inline-block;
   margin-top: 18px;
   color: var(--yellow);
   text-decoration: none;
 }
 
-.linkedin-card a:hover {
+.news-card a:hover {
   color: var(--orange);
 }
 
@@ -299,7 +299,7 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .linkedin-feed {
+  .news-grid {
     grid-template-columns: 1fr;
   }
 
