@@ -161,6 +161,19 @@ main {
   color: var(--text);
 }
 
+.about-actions a.is-unavailable {
+  cursor: not-allowed;
+  border-color: rgba(244, 239, 232, 0.18);
+  background: rgba(244, 239, 232, 0.08);
+  color: var(--muted);
+}
+
+.about-actions a.is-unavailable:hover,
+.about-actions a.is-unavailable:focus {
+  background: rgba(244, 239, 232, 0.08);
+  color: var(--muted);
+}
+
 .news {
   background: #0c0c0c;
 }

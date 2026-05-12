@@ -1,4 +1,5 @@
 const linkedInFeed = document.querySelector("[data-linkedin-feed]");
+const documentLinks = document.querySelectorAll("[data-document-link]");
 
 function renderLinkedInMessage(message) {
   if (!linkedInFeed) {
@@ -48,8 +49,13 @@ async function loadLinkedInPosts() {
     return;
   }
 
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 5000);
+
   try {
-    const response = await fetch("/api/linkedin-posts");
+    const response = await fetch("api/linkedin-posts", {
+      signal: controller.signal,
+    });
 
     if (!response.ok) {
       throw new Error("LinkedIn feed request failed.");
@@ -58,8 +64,27 @@ async function loadLinkedInPosts() {
     const data = await response.json();
     renderLinkedInPosts(data.posts || []);
   } catch (error) {
-    renderLinkedInMessage("Recent LinkedIn posts will appear here after the feed is connected.");
+    renderLinkedInMessage("LinkedIn auto-sync needs the API endpoint deployed with LinkedIn credentials. View the profile for the latest posts.");
+  } finally {
+    window.clearTimeout(timeout);
   }
 }
 
+async function updateDocumentLinks() {
+  await Promise.all([...documentLinks].map(async (link) => {
+    try {
+      const response = await fetch(link.href, { method: "HEAD" });
+
+      if (!response.ok) {
+        throw new Error("Document not found.");
+      }
+    } catch (error) {
+      link.classList.add("is-unavailable");
+      link.setAttribute("aria-disabled", "true");
+      link.addEventListener("click", (event) => event.preventDefault());
+    }
+  }));
+}
+
 loadLinkedInPosts();
+updateDocumentLinks();
