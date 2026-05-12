@@ -99,12 +99,14 @@ main {
   font-size: 1.55rem;
 }
 
-.hero-profile {
+.hero > img.hero-profile {
   position: absolute;
   right: 92px;
   top: 88px;
   width: 280px;
   height: 280px;
+  max-width: 280px;
+  aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--orange);
@@ -302,10 +304,11 @@ p {
     margin-left: 0;
   }
 
-  .hero-profile {
+  .hero > img.hero-profile {
     position: static;
     width: 200px;
     height: 200px;
+    max-width: 200px;
     margin: 0 64px 64px;
   }
 
