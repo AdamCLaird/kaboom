@@ -17,6 +17,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
 }
 
 .sidebar {
@@ -33,12 +34,13 @@ body {
 .sidebar h1 {
   margin: 0;
   color: var(--yellow);
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 .sidebar p {
   color: var(--muted);
   margin-bottom: 36px;
+  font-size: 1.05rem;
 }
 
 .sidebar nav {
@@ -52,6 +54,8 @@ body {
   text-decoration: none;
   border-left: 3px solid transparent;
   padding-left: 12px;
+  font-size: 1.08rem;
+  line-height: 1.35;
 }
 
 .sidebar a:hover {
@@ -80,14 +84,14 @@ main {
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: 3.4rem;
   margin-bottom: 16px;
   color: var(--yellow);
 }
 
 .hero p {
   color: var(--muted);
-  font-size: 1.2rem;
+  font-size: 1.35rem;
 }
 
 .about,
@@ -123,15 +127,15 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
-  padding: 0 16px;
+  min-height: 44px;
+  padding: 0 18px;
   border-radius: 3px;
   background: var(--orange);
   color: #080808;
   text-decoration: none;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.02rem;
   transition: background-color 150ms ease, color 150ms ease;
 }
 
@@ -169,11 +173,14 @@ main {
 
 h2 {
   color: var(--orange);
+  font-size: 2rem;
+  margin-top: 0;
 }
 
 p {
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--muted);
+  font-size: 1.12rem;
 }
 
 .project {
@@ -196,6 +203,6 @@ p {
   }
 
   .hero h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 }
